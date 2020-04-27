@@ -9,6 +9,13 @@ const transactionsRepository = new TransactionsRepository();
 
 transactionRouter.get('/', (request, response) => {
   try {
+    const transactions = transactionsRepository.all();
+    const balance = transactionsRepository.getBalance();
+
+    return response.json({
+      transactions,
+      balance,
+    });
     // TODO
   } catch (err) {
     return response.status(400).json({ error: err.message });
@@ -38,3 +45,8 @@ transactionRouter.post('/', (request, response) => {
 });
 
 export default transactionRouter;
+
+/**
+ *  Routes are responsable recieve req, call data and give res only';
+ *  how data has to be saved
+ */
