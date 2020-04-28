@@ -31,14 +31,14 @@ Node.js API built with Express using the best pratices and design patterns.
 
 ## Requisits Chalange 
 
-✔ should be able to create a new transaction
-✔ should be able to list the transactions
-✔ should not be able to create outcome transaction without a valid balance
+✔ should be able to create a new transaction <br />
+✔ should be able to list the transactions <br />
+✔ should not be able to create outcome transaction without a valid balance <br />
 
 ### Extra funcionalities. 
 
-Cannot create a income or outcome > 10000
-Cannot create a value !== 'outcome' or 'income'
+Cannot create a income or outcome > 10000 <br />
+Cannot create a value !== 'outcome' or 'income' <br />
 
 ## How it works
 
