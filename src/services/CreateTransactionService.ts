@@ -18,13 +18,6 @@ class CreateTransactionService {
 
   // typing values
   public execute({ title, value, type }: Request): Transaction {
-    if (value > 10000) {
-      throw new Error('Limit ecceded');
-    }
-
-    if (['income', 'outcome'].includes(type)) {
-      throw new Error('Not allowed');
-    }
     const { total } = this.transactionsRepository.getBalance();
 
     if (type === 'outcome' && total < value) {
